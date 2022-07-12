@@ -27,10 +27,17 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <h1>Current Time:</h1>
+      <h1 id="current-time"></h1>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-    </div>
+      <div id="hour9" class="row time-block">
+        <p class="col-md-1hour">9 AM</p>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="col-md-1 btn saveBtn"><i class="fa-save fa-lg far"></i> Save</button>
+      </div>
+      
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
