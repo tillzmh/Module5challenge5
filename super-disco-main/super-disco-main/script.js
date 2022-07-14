@@ -3,11 +3,11 @@
 
     const currentday = new DataTransfer();
     const row=$(".time-block");
-    const data = getData();
 
-    let getcurrenthour=false;
+
+    let getcurrenthours=false;
     $.each(row, function(i, row){
-        if(row.id==="Hour" + currenthour){
+        if(row.id==="Hour" + currentday){
             $(row).find("textarea").addClass("present");
             getcurrenthours=true;
         }
@@ -27,6 +27,10 @@
         setdata(data);
     });
     });
+    function getdata(){
+        let data=localStorage.getItem("appointmentdetails") || "{}";
+        return JSON.parse(data);
+    }
 
 
 
