@@ -31,7 +31,10 @@
     });
 
 function getJsonData(){
-    
+    let data=localStorage.getItem("details") || "{}";
+    return JSON.parse(data);
 }
-
+function setdata(data){
+    localStorage.setItem("details", JSON.stringify(data));
+}
 
