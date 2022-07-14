@@ -3,7 +3,7 @@
 
     const currentday = new DataTransfer();
     const row=$(".time-block");
-
+    const data=getJsonData();
 
     let getcurrenthours=false;
     $.each(row, function(i, row){
@@ -19,18 +19,14 @@
                 $(row).find("textarea").addClass("past");
             }
         }
-        if(data[row.id]){
-        $(row).find("textarea").val(data[row.id]);
-    }
     $(row).find("button").on("click",function(){
         data[row.id]=$(row).find("textarea").val();
         setdata(data);
     });
     });
-    function getdata(){
-        let data=localStorage.getItem("appointmentdetails") || "{}";
-        return JSON.parse(data);
-    }
 
+function getJsonData(){
+    
+}
 
 
