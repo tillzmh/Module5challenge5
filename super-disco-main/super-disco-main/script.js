@@ -1,6 +1,8 @@
 
     $("#currentDay").text(moment().format('dddd, MMMM Do'));
 
+
+
     const currentday = new DataTransfer();
     const row=$(".time-block");
     const data=getJsonData();
@@ -18,6 +20,9 @@
             else{
                 $(row).find("textarea").addClass("past");
             }
+        }
+        if(data){
+            $(row).find("textarea").val(data[row.id]);
         }
     $(row).find("button").on("click",function(){
         data[row.id]=$(row).find("textarea").val();
