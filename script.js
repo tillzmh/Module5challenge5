@@ -9,7 +9,7 @@
 
     let getcurrenthours=false;
     $.each(row, function(i, row){
-        if(row.id==="Hour" + currentday){
+        if(row.id==="hour" + currentday){
             $(row).find("textarea").addClass("present");
             getcurrenthours=true;
         }
